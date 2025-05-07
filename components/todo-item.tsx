@@ -20,7 +20,6 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
 
 	const handleDelete = () => {
 		setIsDeleting(true);
-		// Delay actual deletion for animation
 		setTimeout(() => onDelete(todo.id), 300);
 	};
 

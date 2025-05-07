@@ -26,7 +26,6 @@ const TodoList = () => {
 
 	const [mounted, setMounted] = useState(false);
 
-	// Prevent hydration issues
 	useEffect(() => {
 		setMounted(true);
 	}, []);

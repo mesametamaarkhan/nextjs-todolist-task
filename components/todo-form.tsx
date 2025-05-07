@@ -28,7 +28,7 @@ interface TodoFormProps {
 	onSubmit: (title: string, description?: string) => void;
 }
 
-export function TodoForm({ onSubmit }: TodoFormProps) {
+const TodoForm = ({ onSubmit }: TodoFormProps) => {
 	const [showDescription, setShowDescription] = useState(false);
 
 	const form = useForm<FormValues>({
@@ -121,4 +121,6 @@ export function TodoForm({ onSubmit }: TodoFormProps) {
 			</form>
 		</Form>
 	);
-}
+};
+
+export { TodoForm };

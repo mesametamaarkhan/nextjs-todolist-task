@@ -1,10 +1,9 @@
 'use client';
-
 import { useState } from 'react';
 import { useLocalStorage } from './use-local-storage';
 import { Todo, TodoFilter } from '@/lib/types';
 
-export function useTodos() {
+const useTodos = () => {
 	const [todos, setTodos] = useLocalStorage<Todo[]>('todos', []);
 	const [filter, setFilter] = useState<TodoFilter>('all');
 
@@ -55,3 +54,5 @@ export function useTodos() {
 		completedTodos: todos.filter(todo => todo.completed).length,
 	};
 }
+
+export { useTodos };

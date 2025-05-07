@@ -13,7 +13,7 @@ interface TodoFilterProps {
 	};
 }
 
-export function TodoFilters({ filter, onChange, counts }: TodoFilterProps) {
+const TodoFilters = ({ filter, onChange, counts }: TodoFilterProps) => {
 	return (
 		<Tabs
 			value={filter}
@@ -48,4 +48,6 @@ export function TodoFilters({ filter, onChange, counts }: TodoFilterProps) {
 			</TabsList>
 		</Tabs>
 	);
-}
+};
+
+export { TodoFilters };
